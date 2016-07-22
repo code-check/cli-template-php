@@ -1,0 +1,8 @@
+build:
+  - composer install
+files:
+  - .gitignore
+  - app/console
+  - src/MyCommand.php
+  - composer.json
+command: php app/console myapp
