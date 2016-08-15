@@ -5,4 +5,5 @@ files:
   - app/console
   - src/MyCommand.php
   - composer.json
+main: src/MyCommand.php
 command: php app/console myapp
