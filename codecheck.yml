@@ -1,5 +1,5 @@
 build:
-  - composer install
+  - echo "build start..."
 env:
-  APP_COMMAND: php app/console myapp
+  APP_COMMAND: php index.php
 test: mocha

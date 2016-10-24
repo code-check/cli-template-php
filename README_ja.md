@@ -1,24 +1,26 @@
-# CLIアプリケーション作成用テンプレート(PHP)
+# コマンドラインアプリケーション(CLI アプリ)作成用テンプレート(PHP)
 
-PHPでCLIアプリケーションを作成するためのテンプレートです。
-
-[src/MyCommand.php](src/MyCommand.php)を編集することでCLIアプリケーションを作成することができます。
-
-このテンプレートではCLI作成のベースとして[Symfony Console](http://symfony.com/doc/current/components/console/introduction.html)を使用しています。
+[Main.php](src/Main.php)を編集して、CLIアプリを実装してください。  
+チャレンジ内でファイルの作成が許可されていれば、可読性等のためにファイルを分割する事も可能です。
 
 ## コマンドライン引数の取得方法
-デフォルトの設定ではInputInterfaceの`getArgument('args')`を実行することで引数を配列として取得することができます。
+[Main.php](src/Main.php)ファイルに定義されている、`run`という関数内で `$argv` の名前で取得可能です。また、C言語のように `$argc` も同時に渡され、引数の個数が取得可能です。
 
-``` php
-  $args = $input->getArgument('args');
+```php
+<?php
+class Main {
+  public function run ($argc, $argv)
+  {
+    // code to run
+  }
+}
 ```
 
-configure()をカスタマイズすることで自由に引数の取得方法を変更することができます。
+ここで渡される `$argc` 及び `$argv` は [index.php](index.php) の中で渡される [$argc](http://php.net/manual/ja/reserved.variables.argc.php) および [$argv](http://php.net/manual/ja/reserved.variables.argv.php) です。 ただし、`run` 関数内の `$argc`, `$argv` は上の変数とは違うので注意してください。
 
 ## コマンド実行結果の標準出力への出力
-OutputInterface#writelnメソッドを使用してください。
+標準出力への出力には `printf` 関数等が使用できます。
 
 ``` php
-  $output->writeln($v);
+printf("%s", args);
 ```
-

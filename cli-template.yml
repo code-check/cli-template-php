@@ -1,9 +1,6 @@
 build:
-  - composer install
+  - echo "build start..."
 files:
   - .gitignore
-  - app/console
-  - src/MyCommand.php
-  - composer.json
-main: src/MyCommand.php
-command: php app/console myapp
+main: src/Main.php
+command: php index.php

@@ -1,23 +1,26 @@
-# CLI template for PHP
+# Command line application template for PHP
 
-This is template app for making CLI application with PHP.  
-You can make CLI application by editing [src/MyCommand.php](src/MyCommand.php).
-
-This app uses [Symfony Console](http://symfony.com/doc/current/components/console/introduction.html) for base of CLI application.
+Implement CLI application by editing [Main.php](src/Main.php).  
+You may add new files to keep your code clean, if it is allowed in your challenge.
 
 ## How to get input parameters
-As default, You cant ll commandline parameters by `InputInterface#getArgument('args')` method.
+You can get commandline arguments as `$argv` and also can get count of the `$argv` by `$args` in [Main.php](src/Main.php) file where `run` method is defined.
 
-``` php
-  $args = $input->getArgument('args');
+```php
+<?php
+class Main {
+  public function run ($argc, $argv)
+  {
+    // code to run
+  }
+}
 ```
 
-You can customize configure() method to change how to get input parameters.
+`$argc` and `$argv` in this method came from [$argc](http://php.net/manual/en/reserved.variables.argc.php) and [$argv](http://php.net/manual/en/reserved.variables.argv.php), passed in [index.php](index.php). Although it has same variable name, please be careful that `$argc` and `$argv` in `run` method does not connected to the arguments linked in above.
 
 ## How to output result
-You can use OputputInterface#writeln method.
+You can use `print` functions in order to print your result into sdtout.
 
 ``` php
-  $output->writeln($v);
+printf("%s\n", args);
 ```
-
