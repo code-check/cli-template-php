@@ -2,7 +2,7 @@
 
 function run ($argc, $argv)
 {
-  foreach (array_slice($argv, 1) as $arg) {
-    printf("%s\n", $arg);
+  foreach ($argv as $v) {
+    printf("%s\n", $v);
   }
 }
