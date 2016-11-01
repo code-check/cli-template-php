@@ -4,6 +4,6 @@ files:
   - .gitignore
   - composer.json
   - index.php
-  - src/Main.php
-main: src/Main.php
+  - app/Main.php
+main: app/Main.php
 command: php index.php

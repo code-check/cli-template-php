@@ -1,4 +1,4 @@
 <?php namespace Codecheck;
-require('src/Main.php');
+require('app/Main.php');
 
 run($argc - 1, array_slice($argv, 1));

@@ -1,10 +1,10 @@
 # Command line application template for PHP
 
-Implement CLI application by editing [Main.php](src/Main.php).  
+Implement CLI application by editing [Main.php](app/Main.php).  
 You may add new files to keep your code clean, if it is allowed in your challenge.
 
 ## How to get input parameters
-You can get commandline arguments as `$argv` and also can get count of the `$argv` by `$args` in [Main.php](src/Main.php) file where `run` method is defined.
+You can get commandline arguments as `$argv` and also can get count of the `$argv` by `$args` in [Main.php](app/Main.php) file where `run` method is defined.
 
 ```php
 <?php
