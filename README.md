@@ -8,11 +8,10 @@ You can get commandline arguments as `$argv` and also can get count of the `$arg
 
 ```php
 <?php
-class Main {
-  public function run ($argc, $argv)
-  {
-    // code to run
-  }
+
+function run ($argc, $argv)
+{
+  // code to run
 }
 ```
 
