@@ -2,7 +2,7 @@
 
 function run ($argc, $argv)
 {
-  foreach ($argv as $v) {
-    printf("%s\n", $v);
+  foreach ($argv as $index=>$value) {
+    printf("argv[%s]: %s\n", $index, $value);
   }
 }
