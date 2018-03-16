@@ -1,9 +1,10 @@
 build:
   - composer install
 files:
-  - .gitignore
   - composer.json
-  - index.php
-  - app/Main.php
-main: app/Main.php
-command: php index.php
+  - main.php
+main: main.php
+command: php main.php
+envConf:
+  imageName: "givery/track-php-7.2"
+

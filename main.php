@@ -1,4 +1,4 @@
-<?php namespace Codecheck;
+<?php namespace Track;
 
 function run ($argc, $argv)
 {
@@ -6,3 +6,5 @@ function run ($argc, $argv)
     printf("argv[%s]: %s\n", $index, $value);
   }
 }
+
+run($argc - 1, array_slice($argv, 1));
